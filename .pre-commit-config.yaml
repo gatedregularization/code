@@ -1,0 +1,33 @@
+repos:
+
+- repo: https://github.com/charliermarsh/ruff-pre-commit
+  rev: v0.0.264
+  hooks:
+  - id: ruff
+    args: [--exit-non-zero-on-fix]
+
+- repo: https://github.com/psf/black
+  rev: 23.1.0
+  hooks:
+  - id: black
+
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.3.0
+  hooks:
+  - id: end-of-file-fixer
+    exclude: ^tests/data/
+    stages: [pre-commit, pre-merge-commit, pre-push, prepare-commit-msg, commit-msg, post-checkout, post-commit, post-merge, post-rewrite]
+  - id: trailing-whitespace
+    exclude: ^tests/data/
+    stages: [pre-commit, pre-merge-commit, pre-push, prepare-commit-msg, commit-msg, post-checkout, post-commit, post-merge, post-rewrite]
+
+- repo: https://github.com/PyCQA/isort
+  rev: 5.12.0
+  hooks:
+  - id: isort
+
+- repo: https://github.com/codespell-project/codespell
+  rev: v2.2.4
+  hooks:
+  - id: codespell
+    types_or: [python, markdown]
