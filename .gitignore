@@ -1,0 +1,15 @@
+# venvs
+.gr_venv/
+
+# logs and caches
+__pycache__/
+.mypy_cache/
+.ruff_cache/
+logs/
+
+# data
+data
+data/
+
+# MacOS
+.DS_Store
