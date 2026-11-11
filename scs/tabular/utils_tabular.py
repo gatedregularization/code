@@ -130,8 +130,8 @@ def policy_modification(
         Symmetric Dirichlet noise is sampled for each selected policy vector.
         A scaling parameter is randomly drawn to control the noise
         concentration: small values yield spiky, near one-hot distributions
-        (high exploration), while large values yield distributions close to
-        uniform (low exploration). The sampled noise is then convexly combined
+        (low exploration), while large values yield distributions close to
+        uniform (high exploration). The sampled noise is then convexly combined
         with the original policy using `convex_weight`.
 
     Args:
